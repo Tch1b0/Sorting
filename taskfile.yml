@@ -1,0 +1,15 @@
+version: "3"
+
+tasks:
+  build:
+    cmds:
+      - gcc src/main.c -o build/app{{exeExt}}
+
+  run:
+    cmds:
+      - ./build/app{{exeExt}}
+
+  br:
+    cmds:
+      - task: build
+      - task: run
