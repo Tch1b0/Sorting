@@ -6,8 +6,9 @@
 #define UTILS
 
 // Get the length of an array
+// ! Currently not working
 int arrayLength(int array[]) {
-    return (sizeof &array / sizeof &array[0]) + 1;
+    return sizeof &array / sizeof &array;
 }
 
 /*
@@ -15,9 +16,9 @@ int arrayLength(int array[]) {
  * An array counts as sorted when the numbers on the left are 
  * smaller than the numbers on the right
  */
-bool isSorted(int nums[]) {
-    const int LENGTH = arrayLength(nums);
-    for(int i = 1; i < LENGTH; i++) {
+bool isSorted(int nums[], int length) {
+
+    for(int i = 1; i < length; i++) {
         if(nums[i - 1] > nums[i]) {
             return false;
         }
@@ -39,11 +40,9 @@ int* generateArray() {
     return array;
 }
 
-void prettyPrint(int arr[]) {
-    int LENGTH = arrayLength(arr);
-
+void prettyPrint(int arr[], int length) {
     printf("[ ");
-    for(int i = 0; i < LENGTH; i++) {
+    for(int i = 0; i < length; i++) {
         printf("%d ", arr[i]);
     }
     printf("]");
