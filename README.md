@@ -5,8 +5,8 @@ Just a simple implementaion of sorting algorithms in [C](<https://en.wikipedia.o
 ## Implemented algorithms
 
 - [x] Bubble sort
+- [x] Gnome sort
 - [ ] Bogo sort
-- [ ] Gnome sort
 - [ ] Quick sort
 - [ ] Merge sort
 
