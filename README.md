@@ -20,3 +20,8 @@ Run the executable
 
 `task br`:
 Build & Run the program
+
+## Requirements
+
+- gcc
+- taskfile
